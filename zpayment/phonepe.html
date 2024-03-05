@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="Stylesheet" href="phonepe.css">
+<body>
+    <form class="pho">
+        <div class="header">
+            <h4>Phonepe payment</h4>
+        </div>
+    <h3>Scan & Pay via Phonepe</h3>
+    <img id="imgg" src="pho.png">
+    <h4>OR</h4>
+    <h3>Enter Your Moblie Number</h3>
+    <form id="phoneNumberForm">
+        <!-- <label for="phoneNumber">Phonepe Number:</label> -->
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your moblie number">
+        <br>
+        <button type="button" onclick="validatePhoneNumber()">Otp</button>
+        
+  </div>
+      </form>
+    <div id="res">
+      <p id="result"></p>
+    </div>
+      
+      <script>
+        function validatePhoneNumber() {
+          // Get the phone number input value
+          var phoneNumber = document.getElementById('phoneNumber').value;
+          
+          // Regular expression for a valid Indian phone number
+     
+            var phoneRegex = /^[6-9]\d{9}$/;
+
+            
+          
+            // Check if the phone number matches the regex
+            if (phoneRegex.test(phoneNumber)) {
+              // Display "Correct" message in green
+              document.getElementById('result').innerHTML = 'Is_Correct';
+              document.getElementById('result').style.color = 'green';
+            } else {
+              // Display "Incorrect" message in red
+              document.getElementById('result').innerHTML = 'Incorrect';
+              document.getElementById('result').style.color = 'red';
+            }
+          } 
+        
+          
+        </script>
+</form>
+</body>
+</html>

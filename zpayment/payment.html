@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-option Show/Hide</title>
+<style>
+    .option {
+        display: none;
+    }
+</style>
+</head>
+<link rel="stylesheet" href="payment.css">
+<body>
+    <script src="payment.js"></script>
+    
+<div id="paymentoption">
+    <h3>Choose the payment method</h3>
+    <div id="navbar">
+        <img src="car.png" height="30px" width="40px">
+        
+    </div>
+
+<div>
+<label><input type="radio" name="options" value="option1"><b>UPI</b></label><br>
+<div id="option1" class="option"> 
+    
+    <ul><label for="phonepe">
+    <input type="radio" value="phonepe" name="upi" id="phonepe"> PhonePe
+   <br/>
+</label>
+<label for="patym">
+    <input type="radio" value="paytm" name="upi" id="paytm">patym <br/>
+</label>
+<label for="googlepay">
+    <input type="radio" value="phonepe" name="upi" id="googlepay">Google pay <br/>
+</label>
+<label for="yourupi">
+    <input type="radio" value="other" name="upi" id="yourupi" onclick ="showMultiOptions('multiOptions4')">Your UPI ID
+</label> 
+
+    <div id="multiOptions4" class="multi-options">
+        <ul>
+            <input type="text" id="upiid" name="upiid" placeholder="Enter UPI ID">
+            <button id="verfiy">Verfiy</button>
+        </ul>
+    </div>
+</ul>
+
+</div>
+
+
+<label><input type="radio" name="options" value="option2"><b>Card</b></label><br>
+<div id="option2" class="option"> 
+    <ul>
+    <input type="radio" id="debit" name="subAnswer2" value="debit card">
+    <label for="subOption3">Debit Card </label>
+    
+<br>
+    <input type="radio" id="credit" name="subAnswer2" value="credit card">
+    <label for="subOption4">Credit card</label>
+</ul>
+</div>
+
+
+<label><input type="radio" name="options" value="option3"><b> Net Banking</b></label><br>
+
+<div id="option3" class="option">
+    <ul>
+    <br>
+    <h4>Popular bank</h4>
+
+    <label for="AxisBank">
+        <input type="radio" value="AxisBank" name="upi" id="AxisBank">Axis Bank
+           
+    <label for="pnb">
+        <input type="radio" value="pnb" name="upi" id="pnb"> Punjab National Bank
+       
+    </label>
+    
+    <br>
+    
+    </label>
+    <label for="HDFC Bank">
+        <input type="radio" value="HDFC Bank" name="upi" id="yourupi">HDFC Bank
+    </label>  
+
+    <label for="sbi">
+        <input type="radio" value="sbi" name="upi" id="sbi">State Bank of India
+    </label>
+<form id="bank_name">
+<div id="bank_name" class="Bank_name">
+    <h4>Other Bank</h4>
+  <select id="bank_name" name="bank">
+    <option id="b" value="Indian Bank">Indian Bank</option>
+    <option id="b" value="Central Bank of India">Central Bank of India</option>
+    <option id="b" value="Allahabad Bank">Allahabad Bank</option>
+    <option id="b" value="Bank of baroda">Bank of baroda</option>
+    <option id="b" value="bank of india">bank of india</option>
+    <option id="b" value="canara Bank">canara Bank</option>
+    <option id="b" value="Andhra Bank">Andhra Bank</option>
+    <option id="b" value="Other">Other</option>
+  </select>
+</div>
+</form> 
+<button id="pro" type="submit" ><a href="otp.html">Proceed</a></button>
+</ul>
+</div>
+</div>
+</div>
+<script>
+    var radioInputs = document.querySelectorAll('input[type="radio"][name="options"]');
+    radioInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+            var selectedOption = this.value;
+            var allOptions = document.querySelectorAll('.option');
+            for (var i = 0; i < allOptions.length; i++) {
+                if (allOptions[i].id === selectedOption) {
+                    allOptions[i].style.display = 'block';
+                } else {
+                    allOptions[i].style.display = 'none';
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

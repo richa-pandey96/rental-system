@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    background: white;
+}
+button{
+    background: brown;
+    cursor: pointer;
+    font-size: 15px;
+    width: 25%;
+    border-color: transparent;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin: 5px 25px 5px 120px;
+}
+.pho {
+    width: 360px;
+    height: 500px;
+    margin: 60px auto 0;
+    border: 1px solid #150909;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 8px -7px 6px rgba(30, 11, 11, 0.97);
+
+}
+img{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid;
+    box-shadow: 6px -9px 9px black;
+    margin: 9px 25px 5px 68px;
+  
+    
+    
+      
+}
+h3{
+    background-color: #0d447c;
+    color: white;
+}
+h4{
+    text-align: center;
+    color: rgb(8, 4, 242);
+    background-color: white;
+}
+input{
+    background-color: white;
+    font-size: 15px;
+    padding: 1px 16px 3px 4px;
+    margin: 9px 8px 1px 5px;
+
+}
+
+.header {
+    height: 50px;
+    padding: 15px 30px 0;
+    border-bottom: 0px solid #000000;
+    border-top: 1px solid #000000;
+    border-top-left-radius: 5px ;
+    border-top-right-radius: 5px ;
+    background-color: white;
+    font-size: 24px;
+    
+}
+#result {
+    
+    font-size: 20px;
+    width: 90px;
+    height: 25px;
+    align-items: center;
+
+    
+}
+#validationResult{
+    margin: 200px 40px;
+}
+#result{
+    align-items: center;
+    margin: 0px 200px ;
+}
